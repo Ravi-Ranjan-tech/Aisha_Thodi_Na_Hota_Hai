@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aisha</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&family=Inter:wght@300;400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180, 120, 255, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: pulse 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  }
+
+  .container {
+    max-width: 760px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-mark {
+    font-size: 6rem;
+    line-height: 0.5;
+    color: rgba(180, 120, 255, 0.25);
+    font-family: Georgia, serif;
+    display: block;
+    margin-bottom: 1.5rem;
+    user-select: none;
+  }
+
+  .text {
+    font-family: 'Noto Serif Devanagari', Georgia, serif;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.85;
+    color: #e8e0f5;
+    letter-spacing: 0.01em;
+    animation: fadeIn 1.4s ease both;
+  }
+
+  .text em {
+    font-style: normal;
+    color: #c89eff;
+    font-weight: 700;
+  }
+
+  .line {
+    display: block;
+    height: 1px;
+    width: 48px;
+    background: rgba(180, 120, 255, 0.4);
+    margin: 2rem auto 0;
+    animation: fadeIn 2s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="container">
+  <span class="quote-mark">"</span>
+  <p class="text">
+    Aisha thodi na hota hai —<br>
+    matlab hum agar aapko koi task de<br>
+    aur aap <em>accurate same to same</em><br>
+    bna diaye toh man jayenge
+  </p>
+  <span class="line"></span>
+</div>
+</body>
+</html>
